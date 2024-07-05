@@ -1,0 +1,3 @@
+export const FETCH_TVL_REQUEST = "tvl/FETCH_TVL_REQUEST";
+export const FETCH_TVL_SUCCESS = "tvl/FETCH_TVL_SUCCESS";
+export const FETCH_TVL_FAILURE = "tvl/FETCH_TVL_FAILURE";

@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: Lato, "Noto Sans KR", HelveticaNeue, DroidSans, sans-serif,
+    Helvetica;
+}
+
+body {
+  -ms-overflow-style: none;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
