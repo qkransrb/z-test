@@ -16,7 +16,11 @@ const NODE_ENV = process.env.NODE_ENV;
 const PORT = process.env.PORT;
 
 // Middlewares
-app.use(cors());
+app.use(
+  cors({
+    origin: ["http://localhost:3000", "http://3.36.96.113"],
+  })
+);
 app.use(helmet());
 app.use(morgan(NODE_ENV === "production" ? "combined" : "dev"));
 app.use(express.json({ limit: "2mb" }));
