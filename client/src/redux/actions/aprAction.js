@@ -9,7 +9,7 @@ export const fetchAprAction = () => async (dispatch) => {
   try {
     dispatch({ type: FETCH_APR_REQUEST });
 
-    const { data } = await axios.get("/api/apr");
+    const { data } = await axios.get("http://localhost:5000/api/apr");
 
     dispatch({ type: FETCH_APR_SUCCESS, payload: data });
   } catch (error) {

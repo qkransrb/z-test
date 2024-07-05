@@ -12,7 +12,7 @@ export const fetchReserveAction = () => async (dispatch) => {
   try {
     dispatch({ type: FETCH_RESERVE_REQUEST });
 
-    const { data } = await axios.get("/api/reserves");
+    const { data } = await axios.get("http://localhost:5000/api/reserves");
 
     dispatch({ type: FETCH_RESERVE_SUCCESS, payload: data });
   } catch (error) {
@@ -30,7 +30,9 @@ export const fetchOriginalReserveAction = () => async (dispatch) => {
   try {
     dispatch({ type: FETCH_ORIGINAL_RESERVE_REQUEST });
 
-    const { data } = await axios.get("/api/reserves/original");
+    const { data } = await axios.get(
+      "http://localhost:5000/api/reserves/original"
+    );
 
     dispatch({ type: FETCH_ORIGINAL_RESERVE_SUCCESS, payload: data });
   } catch (error) {

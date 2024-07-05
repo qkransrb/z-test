@@ -9,7 +9,7 @@ export const fetchTvlAction = () => async (dispatch) => {
   try {
     dispatch({ type: FETCH_TVL_REQUEST });
 
-    const { data } = await axios.get("/api/tvl");
+    const { data } = await axios.get("http://localhost:5000/api/tvl");
 
     dispatch({ type: FETCH_TVL_SUCCESS, payload: data });
   } catch (error) {
