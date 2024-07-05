@@ -10,7 +10,7 @@ export const fetchBalanceAction = () => async (dispatch, getState) => {
     dispatch({ type: FETCH_BALANCE_REQUEST });
 
     const { data } = await axios.get(
-      `http://localhost:5000/api/balance/${getState().wallet.address}`
+      `/api/balance/${getState().wallet.address}`
     );
 
     dispatch({ type: FETCH_BALANCE_SUCCESS, payload: data });

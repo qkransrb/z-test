@@ -11,9 +11,7 @@ export const fetchLiquidityAction =
       dispatch({ type: FETCH_LIQUIDITY_REQUEST });
 
       const { data } = await axios.get(
-        `http://localhost:5000/api/liquidity/${pairA}/${pairB}/${
-          getState().wallet.address
-        }`
+        `/api/liquidity/${pairA}/${pairB}/${getState().wallet.address}`
       );
 
       dispatch({ type: FETCH_LIQUIDITY_SUCCESS, payload: data });

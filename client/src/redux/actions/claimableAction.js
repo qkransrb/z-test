@@ -9,9 +9,7 @@ export const fetchClaimableAction = () => async (dispatch, getState) => {
   try {
     dispatch({ type: FETCH_CLAIMABLE_REQUEST });
 
-    const { data } = await axios.get(
-      `http://localhost:5000/api/claim/${getState().wallet.address}`
-    );
+    const { data } = await axios.get(`/api/claim/${getState().wallet.address}`);
 
     dispatch({ type: FETCH_CLAIMABLE_SUCCESS, payload: data });
   } catch (error) {

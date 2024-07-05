@@ -11,13 +11,10 @@ export const fetchSwapEstimatedBalanceAction =
     try {
       dispatch({ type: FETCH_SWAP_ESTIMATED_BALANCE_REQUEST });
 
-      const { data } = await axios.post(
-        "http://localhost:5000/api/swap/estimated",
-        {
-          amount,
-          tokens,
-        }
-      );
+      const { data } = await axios.post("/api/swap/estimated", {
+        amount,
+        tokens,
+      });
 
       dispatch({ type: FETCH_SWAP_ESTIMATED_BALANCE_SUCCESS, payload: data });
     } catch (error) {

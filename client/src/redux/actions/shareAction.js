@@ -9,9 +9,7 @@ export const fetchShareOfMyPoolAction = () => async (dispatch, getState) => {
   try {
     dispatch({ type: FETCH_SHARE_OF_MY_POOL_REQUEST });
 
-    const { data } = await axios.get(
-      `http://localhost:5000/api/share/${getState().wallet.address}`
-    );
+    const { data } = await axios.get(`/api/share/${getState().wallet.address}`);
 
     dispatch({ type: FETCH_SHARE_OF_MY_POOL_SUCCESS, payload: data });
   } catch (error) {
