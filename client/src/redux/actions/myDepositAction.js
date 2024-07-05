@@ -13,7 +13,7 @@ export const fetchMyDepositAction = () => async (dispatch, getState) => {
     dispatch({ type: FETCH_MY_DEPOSIT_REQUEST });
 
     const { data } = await axios.get(
-      `/api/deposit/${getState().wallet.address}`
+      `http://3.36.96.113:5000/api/deposit/${getState().wallet.address}`
     );
 
     dispatch({ type: FETCH_MY_DEPOSIT_SUCCESS, payload: data });
@@ -33,7 +33,7 @@ export const fetchMyDepositAmountAction = () => async (dispatch, getState) => {
     dispatch({ type: FETCH_MY_DEPOSIT_AMOUNT_REQUEST });
 
     const { data } = await axios.get(
-      `/api/deposit/amount/${getState().wallet.address}`
+      `http://3.36.96.113:5000/api/deposit/amount/${getState().wallet.address}`
     );
 
     dispatch({ type: FETCH_MY_DEPOSIT_AMOUNT_SUCCESS, payload: data });

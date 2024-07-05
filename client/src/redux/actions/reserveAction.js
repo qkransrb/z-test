@@ -30,7 +30,9 @@ export const fetchOriginalReserveAction = () => async (dispatch) => {
   try {
     dispatch({ type: FETCH_ORIGINAL_RESERVE_REQUEST });
 
-    const { data } = await axios.get("/api/reserves/original");
+    const { data } = await axios.get(
+      "http://3.36.96.113:5000/api/reserves/original"
+    );
 
     dispatch({ type: FETCH_ORIGINAL_RESERVE_SUCCESS, payload: data });
   } catch (error) {

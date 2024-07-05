@@ -9,7 +9,9 @@ export const fetchBuybackAssetAction = () => async (dispatch) => {
   try {
     dispatch({ type: FETCH_BUYBACK_ASSET_REQUEST });
 
-    const { data } = await axios.get("/api/buyback/asset");
+    const { data } = await axios.get(
+      "http://3.36.96.113:5000/api/buyback/asset"
+    );
 
     dispatch({ type: FETCH_BUYBACK_ASSET_SUCCESS, payload: data });
   } catch (error) {

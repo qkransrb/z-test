@@ -9,7 +9,7 @@ export const fetchDefaultAction = () => async (dispatch) => {
   try {
     dispatch({ type: DEFAULT_INFORMATION_REQUEST });
 
-    const { data } = await axios.get("/api/default");
+    const { data } = await axios.get("http://3.36.96.113:5000/api/default");
 
     dispatch({ type: DEFAULT_INFORMATION_SUCCESS, payload: data });
   } catch (error) {

@@ -9,7 +9,7 @@ export const fetchPriceAction = () => async (dispatch) => {
   try {
     dispatch({ type: FETCH_PRICE_REQUEST });
 
-    const { data } = await axios.get("/api/price");
+    const { data } = await axios.get("http://3.36.96.113:5000/api/price");
 
     dispatch({ type: FETCH_PRICE_SUCCESS, payload: data });
   } catch (error) {
