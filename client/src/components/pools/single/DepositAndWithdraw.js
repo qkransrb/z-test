@@ -256,7 +256,7 @@ const DepositAndWithdraw = () => {
                   {t("poolsScreen.walletBalance")}
                 </p>
                 <div className="space-x-2 text-xs md:text-sm text-[#222222]">
-                  <span>{withComma(balance.zyno)}</span>
+                  <span>{withComma(replaceDecimal(balance.zyno, 6))}</span>
                   <span>ZYNO</span>
                 </div>
               </div>
@@ -308,7 +308,7 @@ const DepositAndWithdraw = () => {
                   {t("poolsScreen.poolBalance")}
                 </p>
                 <div className="space-x-2 text-xs md:text-sm text-[#222222]">
-                  <span>{withComma(amount.zyno)}</span>
+                  <span>{withComma(replaceDecimal(amount.zyno, 6))}</span>
                   <span>ZYNO</span>
                 </div>
               </div>
