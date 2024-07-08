@@ -6,6 +6,7 @@ const {
 const config = require("../config");
 
 const { Web3 } = require("web3");
+const { replaceDecimal } = require("../utils/numberUtil");
 const web3 = new Web3(config.NETWORK);
 
 exports.shareOfMyPool = async (req, res, next) => {
@@ -47,11 +48,12 @@ exports.shareOfMyPoolZyno = async (req, res, next) => {
 
     const shareOfMyPool = zynoMyDeposit / zynoReserves;
 
-    res.json({
-      zyno: String(shareOfMyPool).includes(".")
-        ? Number(String(shareOfMyPool).substring(0, 4)) * 100
-        : shareOfMyPool * 100,
-    });
+    // res.json({
+    //   zyno: String(shareOfMyPool).includes(".")
+    //     ? Number(String(shareOfMyPool).substring(0, 4)) * 100
+    //     : shareOfMyPool * 100,
+    // });
+    res.json({ zyno: replaceDecimal(shareOfMyPool * 100, 6) });
   } catch (error) {
     console.error("> shareOfMyPoolZyno: ", error.message);
     next(error);
@@ -111,10 +113,14 @@ exports.shareOfMyPoolZynoBusdt = async (req, res, next) => {
 
     const shareOfMyPool = myZynoBusdtDeposit / zyno_busdt_reserves;
 
+    // return res.json({
+    //   zyno_busdt: String(shareOfMyPool).includes(".")
+    //     ? Number(String(shareOfMyPool).substring(0, 4)) * 100
+    //     : shareOfMyPool * 100,
+    // });
+
     return res.json({
-      zyno_busdt: String(shareOfMyPool).includes(".")
-        ? Number(String(shareOfMyPool).substring(0, 4)) * 100
-        : shareOfMyPool * 100,
+      zyno_busdt: replaceDecimal(shareOfMyPool * 100, 6),
     });
   } catch (error) {
     console.error("> shareOfMyPoolZynoBusdt: ", error.message);

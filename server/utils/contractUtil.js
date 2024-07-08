@@ -254,9 +254,11 @@ exports.zynoShareOfMyPool = async (address) => {
 
     const shareOfMyPool = zynoMyDeposit / zynoReserves;
 
-    return String(shareOfMyPool).includes(".")
-      ? Number(String(shareOfMyPool).substring(0, 4)) * 100
-      : shareOfMyPool * 100;
+    // return String(shareOfMyPool).includes(".")
+    //   ? Number(String(shareOfMyPool).substring(0, 4)) * 100
+    //   : shareOfMyPool * 100;
+
+    return replaceDecimal(shareOfMyPool * 100, 6);
   } catch (error) {
     console.error("> [util] zynoShareOfMyPool: ", error.message);
   }
