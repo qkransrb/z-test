@@ -80,17 +80,17 @@ exports.getMyBalance = async (req, res, next) => {
     const zynoBalance = await zyno.methods.balanceOf(address).call();
     const busdtBalance = await busdt.methods.balanceOf(address).call();
 
-    const zynoDecimals = await zyno.methods.decimals().call();
-    const busdtDecimals = await busdt.methods.decimals().call();
+    // const zynoDecimals = await zyno.methods.decimals().call();
+    // const busdtDecimals = await busdt.methods.decimals().call();
 
     return res.json({
       zyno: replaceDecimal(
         parseFloat(web3.utils.fromWei(zynoBalance, "ether")),
-        zynoDecimals
+        6
       ),
       busdt: replaceDecimal(
         parseFloat(web3.utils.fromWei(busdtBalance, "ether")),
-        busdtDecimals
+        6
       ),
     });
   } catch (error) {

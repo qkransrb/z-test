@@ -9,7 +9,7 @@ exports.replaceDecimal = (number, limit) => {
           "." +
           str.split(".")[1].substring(0, parseInt(limit))
       )
-    : Number(str).toFixed(limit.toString());
+    : Number(str).toFixed(Number(limit));
 };
 
 exports.getDecimals = (symbol) => {
