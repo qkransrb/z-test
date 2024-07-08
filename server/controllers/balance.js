@@ -87,11 +87,11 @@ exports.getMyBalance = async (req, res, next) => {
       zyno: replaceDecimal(
         parseFloat(web3.utils.fromWei(zynoBalance, "ether")),
         zynoDecimals
-      ),
+      ).toString(),
       busdt: replaceDecimal(
         parseFloat(web3.utils.fromWei(busdtBalance, "ether")),
         busdtDecimals
-      ),
+      ).toString(),
     });
   } catch (error) {
     console.error(`[getMyBalance] - ${error}`);
