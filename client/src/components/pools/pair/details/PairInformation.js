@@ -40,7 +40,7 @@ const PairInformation = ({ pairA, pairB }) => {
           </p>
           <p className="space-x-1 md:space-x-2">
             <span>{t("poolsScreen.dailyDistribution")}</span>
-            <span>54,794.520 ZYNO</span>
+            <span>54,794 ZYNO</span>
           </p>
         </div>
       </div>

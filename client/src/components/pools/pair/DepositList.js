@@ -71,7 +71,7 @@ const DepositList = () => {
                 <td className="text-center text-sm text-[#222222]">
                   <div className="flex justify-around items-center">
                     <span>{t("poolsScreen.dailyRewards")}</span>
-                    <span className="font-semibold">54,794.520 ZYNO</span>
+                    <span className="font-semibold">54,794 ZYNO</span>
                   </div>
                 </td>
                 <td className="text-center">
@@ -126,7 +126,7 @@ const DepositList = () => {
               </div>
               <div className="flex justify-between items-center text-sm text-gray-700">
                 <span>{t("poolsScreen.dailyRewards")}</span>
-                <span className="font-semibold">54,794.520 ZYNO</span>
+                <span className="font-semibold">54,794 ZYNO</span>
               </div>
             </div>
             <div className="w-full mt-4 pb-2">

@@ -151,7 +151,7 @@ const DepositAndWithdraw = () => {
               <td className="pr-4">
                 <div className="flex justify-around items-center text-sm text-[#222222]">
                   <span>{t("poolsScreen.dailyRewards")}</span>
-                  <span className="font-semibold">54,794.520 ZYNO</span>
+                  <span className="font-semibold">54,794 ZYNO</span>
                 </div>
               </td>
             </tr>
@@ -190,7 +190,7 @@ const DepositAndWithdraw = () => {
             </div>
             <div className="flex justify-between items-center text-sm text-gray-700">
               <span>{t("poolsScreen.dailyRewards")}</span>
-              <span className="font-semibold">54,794.520 ZYNO</span>
+              <span className="font-semibold">54,794 ZYNO</span>
             </div>
           </div>
         </div>

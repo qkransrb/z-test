@@ -27,7 +27,7 @@ const PoolList = () => {
               {t("homeScreen.totalDailyRewards")}
             </span>
             <span className="text-sm md:text-lg text-primary font-semibold">
-              54,794.520
+              54,794
             </span>
           </p>
         </div>
@@ -71,7 +71,7 @@ const PoolList = () => {
               <td className="text-center">{`${withComma(
                 replaceDecimal(apr.zyno, 2)
               )} %`}</td>
-              <td className="text-center">54,794.520 ZYNO</td>
+              <td className="text-center">54,794 ZYNO</td>
               <td className="text-center">
                 <Link
                   to="/pools/single"
@@ -107,7 +107,7 @@ const PoolList = () => {
               <td className="text-center">{`${withComma(
                 replaceDecimal(apr.zyno_busdt, 2)
               )} %`}</td>
-              <td className="text-center">54,794.520 ZYNO</td>
+              <td className="text-center">54,794 ZYNO</td>
               <td className="text-center">
                 <Link
                   to="/pools/pair/zyno-busdt"
@@ -152,7 +152,7 @@ const PoolList = () => {
             </div>
             <div className="flex justify-between items-center text-sm text-gray-700">
               <span>{t("homeScreen.dailyReward")}</span>
-              <span className="font-semibold">54,794.520 ZYNO</span>
+              <span className="font-semibold">54,794 ZYNO</span>
             </div>
           </div>
           <div className="w-full mt-4 pb-2">
@@ -201,7 +201,7 @@ const PoolList = () => {
             </div>
             <div className="flex justify-between items-center text-sm text-gray-700">
               <span>{t("homeScreen.dailyReward")}</span>
-              <span className="font-semibold">54,794.520 ZYNO</span>
+              <span className="font-semibold">54,794 ZYNO</span>
             </div>
           </div>
           <div className="w-full mt-4 pb-2">
