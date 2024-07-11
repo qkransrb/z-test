@@ -109,7 +109,7 @@ exports.getTVL = async () => {
 // get zyno single apr
 exports.getZynoSingleAPR = async () => {
   try {
-    const dailyRewards = 1000.0;
+    const dailyRewards = 54794.52;
 
     const zynoSingleReserves = await this.getZynoSingleReserves();
 
@@ -127,7 +127,7 @@ exports.getZynoSingleAPR = async () => {
 // get zyno-busdt pair apr
 exports.getZynoBusdtPairAPR = async () => {
   try {
-    const dailyRewards = 1000.0;
+    const dailyRewards = 54794.52;
 
     const zynoBusdtPairReserves = await this.getZynoBusdtPairReserves();
 

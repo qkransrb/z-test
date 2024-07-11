@@ -33,8 +33,8 @@ exports.information = async (req, res, next) => {
       parseReserve(zyno_busdt_pair_reserve[1], 6) * busdt_price;
 
     // apr
-    const single_daily_rewards = 1000.0;
-    const pair_daily_rewards = 1000.0;
+    const single_daily_rewards = 54794.52;
+    const pair_daily_rewards = 54794.52;
     const zyno_single_apr =
       ((single_daily_rewards * 365 * zyno_price) /
         (parseReserve(zyno_single_reserve, 18) * zyno_price)) *
