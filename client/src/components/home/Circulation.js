@@ -64,12 +64,10 @@ const Circulation = () => {
               replaceDecimal(price.zyno, 6)
             )}`}</div>
           </div>
-          <Link
-            to="/swap"
-            className="bg-primary text-white text-xs md:text-sm px-4 py-2 rounded-md md:rounded-sm hover:brightness-110 duration-300"
-          >
-            Buy ZYNO
-          </Link>
+          <div className="bg-primary text-white text-xs md:text-sm px-4 py-2 rounded-md md:rounded-sm hover:brightness-110 duration-300 group cursor-not-allowed">
+            <span className="group-hover:hidden">Buy ZYNO</span>
+            <span className="hidden group-hover:block">Ready</span>
+          </div>
         </div>
         <div className="flex justify-between items-start">
           <div className="space-y-2">
