@@ -1,5 +1,6 @@
 const { replaceDecimal } = require("../utils/numberUtil");
 const config = require("../config");
+const BigNumber = require("bignumber.js");
 
 // const Caver = require("caver-js");
 // const option = {
@@ -89,7 +90,12 @@ exports.getMyBalance = async (req, res, next) => {
         6
       ),
       busdt: replaceDecimal(
-        parseFloat(web3.utils.fromWei(busdtBalance, "ether")),
+        Number(
+          new BigNumber(busdtBalance).dividedBy(`1e6`).toString(10)
+        ).toLocaleString(undefined, {
+          useGrouping: false,
+          maximumFractionDigits: 6,
+        }),
         6
       ),
     });
