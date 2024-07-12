@@ -28,39 +28,59 @@ exports.getLiquidities = async (req, res, next) => {
       pairAddress
     );
 
+    const t = await pair.methods.totalSupply().call();
+    const m = await router.methods
+      .getLiquidity(
+        req.params.address,
+        process.env[req.params.pairA.toUpperCase()],
+        process.env[req.params.pairB.toUpperCase()]
+      )
+      .call();
+
+    // return res.json({
+    //   liquidity: {
+    //     total: replaceDecimal(
+    //       replaceDecimal(toWei(await pair.methods.totalSupply().call()), 6),
+    //       6
+    //     ),
+    //     my: replaceDecimal(
+    //       replaceDecimal(
+    //         toWei(
+    //           await router.methods
+    //             .getLiquidity(
+    //               req.params.address,
+    //               process.env[req.params.pairA.toUpperCase()],
+    //               process.env[req.params.pairB.toUpperCase()]
+    //             )
+    //             .call()
+    //         ),
+    //         6
+    //       ),
+    //       6
+    //     ),
+    //   },
+    //   original: {
+    //     total: (await pair.methods.totalSupply().call()).toString(),
+    //     my: (
+    //       await router.methods
+    //         .getLiquidity(
+    //           req.params.address,
+    //           process.env[req.params.pairA.toUpperCase()],
+    //           process.env[req.params.pairB.toUpperCase()]
+    //         )
+    //         .call()
+    //     ).toString(),
+    //   },
+    // });
+
     return res.json({
       liquidity: {
-        total: replaceDecimal(
-          replaceDecimal(toWei(await pair.methods.totalSupply().call()), 6),
-          6
-        ),
-        my: replaceDecimal(
-          replaceDecimal(
-            toWei(
-              await router.methods
-                .getLiquidity(
-                  req.params.address,
-                  process.env[req.params.pairA.toUpperCase()],
-                  process.env[req.params.pairB.toUpperCase()]
-                )
-                .call()
-            ),
-            6
-          ),
-          6
-        ),
+        total: replaceDecimal(web3.utils.fromWei(t, "ether"), 6),
+        my: replaceDecimal(web3.utils.fromWei(m, "ether"), 6),
       },
       original: {
-        total: (await pair.methods.totalSupply().call()).toString(),
-        my: (
-          await router.methods
-            .getLiquidity(
-              req.params.address,
-              process.env[req.params.pairA.toUpperCase()],
-              process.env[req.params.pairB.toUpperCase()]
-            )
-            .call()
-        ).toString(),
+        total: t.toString(),
+        my: m.toString(),
       },
     });
   } catch (error) {

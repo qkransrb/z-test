@@ -122,13 +122,31 @@ const PairWithdrawTransaction = ({
   const calculateWithdrawAmount = () => {
     const pairAAmount = new BigNumber(toPeb(withdrawInput, "zyno"))
       .multipliedBy(new BigNumber(original[pairA + "_" + pairB][pairA]))
-      .dividedBy(liquidity.total)
-      .integerValue(BigNumber.ROUND_DOWN);
+      .dividedBy(new BigNumber(liquidity.total))
+      .integerValue(BigNumber.ROUND_DOWN)
+      .toFixed();
 
     const pairBAmount = new BigNumber(toPeb(withdrawInput, "zyno"))
       .multipliedBy(new BigNumber(original[pairA + "_" + pairB][pairB]))
-      .dividedBy(liquidity.total)
-      .integerValue(BigNumber.ROUND_DOWN);
+      .dividedBy(new BigNumber(liquidity.total))
+      .integerValue(BigNumber.ROUND_DOWN)
+      .toFixed();
+
+    // console.log(pairAAmount);
+    // console.log(pairBAmount);
+
+    // console.log(
+    //   fromPeb(pairAAmount, pairA, {
+    //     minimumFractionDigits: 6,
+    //     maximumFractionDigits: 6,
+    //   })
+    // );
+    // console.log(
+    //   fromPeb(pairBAmount, pairB, {
+    //     minimumFractionDigits: 6,
+    //     maximumFractionDigits: 6,
+    //   })
+    // );
 
     setEstimatedPairA(pairAAmount);
     setEstimatedPairB(pairBAmount);
@@ -186,13 +204,12 @@ const PairWithdrawTransaction = ({
           <div className="bg-gray-100 rounded-md text-lg text-gray-700 font-bold text-right px-2 py-3 shadow-md space-y-2">
             <div className="space-x-2">
               <span>
-                {/* {withComma(
+                {withComma(
                   fromPeb(estimatedPairA, pairA, {
                     minimumFractionDigits: 6,
                     maximumFractionDigits: 6,
                   })
-                )} */}
-                {withComma(amount[pairA + "_" + pairB][pairA])}
+                )}
               </span>
               <span className="inline-block min-w-[70px]">
                 {pairA.toUpperCase()}
@@ -200,13 +217,12 @@ const PairWithdrawTransaction = ({
             </div>
             <div className="space-x-2">
               <span>
-                {/* {withComma(
+                {withComma(
                   fromPeb(estimatedPairB, pairB, {
                     minimumFractionDigits: 6,
                     maximumFractionDigits: 6,
                   })
-                )} */}
-                {withComma(amount[pairA + "_" + pairB][pairB])}
+                )}
               </span>
               <span className="inline-block min-w-[70px]">
                 {pairB.toUpperCase()}
