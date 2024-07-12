@@ -29,7 +29,7 @@ const Header = ({ location }) => {
     <header className="max-w-[1160px] w-full mx-auto flex flex-col space-y-4 py-2 z-50 px-6 lg:px-0 relative">
       <div className="hidden lg:flex justify-end items-center space-x-6 absolute right-0">
         {/* More */}
-        <More />
+        {/* <More /> */}
 
         {/* Block Number */}
         <BlockNumber />
