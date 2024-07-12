@@ -44,6 +44,7 @@ const PairWithdrawTransaction = ({
   const { reserve, original } = useSelector((state) => state.default);
   const { shareOfMyPool } = useSelector((state) => state.shareOfMyPool);
   const { claimable } = useSelector((state) => state.claimable);
+  const { amount } = useSelector((state) => state.myDepositAmount);
 
   useEffect(() => {
     calculateWithdrawAmount();
@@ -185,12 +186,13 @@ const PairWithdrawTransaction = ({
           <div className="bg-gray-100 rounded-md text-lg text-gray-700 font-bold text-right px-2 py-3 shadow-md space-y-2">
             <div className="space-x-2">
               <span>
-                {withComma(
+                {/* {withComma(
                   fromPeb(estimatedPairA, pairA, {
                     minimumFractionDigits: 6,
                     maximumFractionDigits: 6,
                   })
-                )}
+                )} */}
+                {withComma(amount[pairA + "_" + pairB][pairA])}
               </span>
               <span className="inline-block min-w-[70px]">
                 {pairA.toUpperCase()}
@@ -198,12 +200,13 @@ const PairWithdrawTransaction = ({
             </div>
             <div className="space-x-2">
               <span>
-                {withComma(
+                {/* {withComma(
                   fromPeb(estimatedPairB, pairB, {
                     minimumFractionDigits: 6,
                     maximumFractionDigits: 6,
                   })
-                )}
+                )} */}
+                {withComma(amount[pairA + "_" + pairB][pairB])}
               </span>
               <span className="inline-block min-w-[70px]">
                 {pairB.toUpperCase()}
