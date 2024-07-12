@@ -27,7 +27,7 @@ const PoolList = () => {
               {t("homeScreen.totalDailyRewards")}
             </span>
             <span className="text-sm md:text-lg text-primary font-semibold">
-              54,794
+              109,588
             </span>
           </p>
         </div>

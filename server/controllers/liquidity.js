@@ -31,18 +31,21 @@ exports.getLiquidities = async (req, res, next) => {
     return res.json({
       liquidity: {
         total: replaceDecimal(
-          toWei(await pair.methods.totalSupply().call()),
+          replaceDecimal(toWei(await pair.methods.totalSupply().call()), 6),
           6
         ),
         my: replaceDecimal(
-          toWei(
-            await router.methods
-              .getLiquidity(
-                req.params.address,
-                process.env[req.params.pairA.toUpperCase()],
-                process.env[req.params.pairB.toUpperCase()]
-              )
-              .call()
+          replaceDecimal(
+            toWei(
+              await router.methods
+                .getLiquidity(
+                  req.params.address,
+                  process.env[req.params.pairA.toUpperCase()],
+                  process.env[req.params.pairB.toUpperCase()]
+                )
+                .call()
+            ),
+            6
           ),
           6
         ),

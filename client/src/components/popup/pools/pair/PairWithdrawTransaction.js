@@ -249,7 +249,7 @@ const PairWithdrawTransaction = ({
             <span>{t("layerPopup.claimRewards2")}</span>
             <div className="space-x-1">
               <span>{withComma(claimable[pairA + "_" + pairB])}</span>
-              <span className="font-semibold">QTBG</span>
+              <span className="font-semibold">ZYNO</span>
             </div>
           </div>
         </div>
