@@ -67,7 +67,7 @@
     "myDeposit": "My Deposit",
     "claimableToken": "Claimable Token",
     "shareOfPool": "Share of Pool",
-    "rewards": "Rewards",
+    "rewards": "Claim",
     "expectedReturn": "Expected Return",
     "poolSize": "Pool Size",
     "dailyDistribution": "Daily Distribution",
@@ -78,7 +78,7 @@
     "yourStaked": "Your Staked",
     "walletBalance": "My Wallet Balance",
     "poolBalance": "My LP Balance",
-    "claimRewards2": "Claim Rewards",
+    "claimRewards2": "Claim",
     "shareOfMyPool": "Share of My Pool",
     "earnRewards": "Earn Rewards"
   },
