@@ -14,3 +14,13 @@ body {
 ::-webkit-scrollbar {
   display: none;
 }
+
+@layer components {
+  .vertical-center {
+    height: calc(100vh - 118px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
