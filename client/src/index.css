@@ -1,10 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100..900&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 * {
-  font-family: Lato, "Noto Sans KR", HelveticaNeue, DroidSans, sans-serif,
-    Helvetica;
+  font-family: "Noto Sans SC", sans-serif;
 }
 
 body {
