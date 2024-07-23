@@ -40,12 +40,11 @@ const Header = ({ location }) => {
       <div className="justify-center hidden md:flex">
         <Link to="/" className="flex items-center gap-x-4">
           <img
-            src="/images/zyno.jpg"
+            src="/images/zynoro-logo.png"
             alt="zynoro"
-            width={40}
-            className="rounded-full"
+            width={187}
+            className="object-cover"
           />
-          <h1 className="text-primary text-2xl font-bold">ZYNORO</h1>
         </Link>
       </div>
       <div className="text-white flex justify-between items-center">
