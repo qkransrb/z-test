@@ -33,11 +33,11 @@ const Home = () => {
         autoPlay
         loop
         // className="xl:fixed top-0 left-0 w-full xl:opacity-70 mt-20 mb-40 xl:my-0 rounded-md xl:rounded-none"
-        className="max-w-[900px] w-full mx-auto pb-20"
+        className="max-w-[900px] w-full mx-auto pt-20 pb-20"
       >
         <source src={zynoro} type="video/mp4" />
       </video>
-      <div className="space-y-7 pb-20">
+      <div className="space-y-7">
         <Title title="homeScreen.title" />
         <div className="flex flex-col lg:flex-row lg:space-x-6 space-y-7 lg:space-y-0">
           <div className="w-full lg:w-[60%]">
@@ -54,7 +54,7 @@ const Home = () => {
           src="/images/allocation.svg"
           alt=""
           width={900}
-          className="mx-auto py-20"
+          className="mx-auto py-48"
         />
       </div>
     </>
