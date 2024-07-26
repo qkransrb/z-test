@@ -6,7 +6,7 @@ import TVL from "../components/home/TVL";
 import Title from "../components/Title";
 import { fetchDefaultAction } from "../redux/actions/defaultAction";
 import HomeSlider from "../components/home/HomeSlider";
-import zynoro from "../assets/videos/zynoro.mp4";
+import zynoroGif from "../assets/images/zynoro.gif";
 
 const Home = () => {
   const dispatch = useDispatch();
@@ -27,16 +27,7 @@ const Home = () => {
   return (
     <>
       <HomeSlider />
-
-      <video
-        muted
-        autoPlay
-        loop
-        // className="xl:fixed top-0 left-0 w-full xl:opacity-70 mt-20 mb-40 xl:my-0 rounded-md xl:rounded-none"
-        className="max-w-[900px] w-full mx-auto pt-20 pb-20"
-      >
-        <source src={zynoro} type="video/mp4" />
-      </video>
+      <img src={zynoroGif} alt="Zynoro" className="py-10" />
       <div className="space-y-7">
         <Title title="homeScreen.title" />
         <div className="flex flex-col lg:flex-row lg:space-x-6 space-y-7 lg:space-y-0">
