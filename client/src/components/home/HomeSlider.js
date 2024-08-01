@@ -16,7 +16,7 @@ const HomeSlider = () => {
 
   return (
     <Slider {...settings} className="py-20">
-      <div className="bg-gradient-to-br from-primary/70 to-transparent h-[600px] !flex !flex-col !items-center !justify-center space-y-10 rounded-3xl">
+      <div className="bg-slider h-[600px] !flex !flex-col !items-center !justify-center space-y-10 rounded-3xl">
         <h2 className="text-3xl md:text-6xl text-white font-semibold">
           ZYNORO Ecosystem
         </h2>
@@ -28,7 +28,7 @@ const HomeSlider = () => {
         </p>
       </div>
 
-      <div className="bg-gradient-to-br from-primary/70 to-transparent h-[600px] !flex !flex-col !items-center !justify-center space-y-10 rounded-3xl">
+      <div className="bg-slider h-[600px] !flex !flex-col !items-center !justify-center space-y-10 rounded-3xl">
         <h2 className="text-3xl md:text-6xl text-white font-semibold">
           ZYNORO Solution
         </h2>
@@ -41,7 +41,7 @@ const HomeSlider = () => {
         </p>
       </div>
 
-      <div className="bg-gradient-to-br from-primary/70 to-transparent h-[600px] !flex !flex-col !items-center !justify-center space-y-10 rounded-3xl">
+      <div className="bg-slider h-[600px] !flex !flex-col !items-center !justify-center space-y-10 rounded-3xl">
         <h2 className="text-3xl md:text-6xl text-white font-semibold">
           ZYNORO Mission
         </h2>

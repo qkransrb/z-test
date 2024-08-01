@@ -14,6 +14,7 @@ module.exports = {
         zynoro: "url(/src/assets/images/background.jpg)",
         quantfi: "url(/src/assets/images/bg-quantfi.png)",
         dashboard: "url(/src/assets/images/bg-dashboard.png)",
+        slider: "url(/src/assets/images/bg_slider.jpg)",
       },
     },
   },
